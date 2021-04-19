@@ -1,16 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Header() {
-  let styles ={
-      
-  }
+  let styles = {};
   return (
     <div style={styles}>
       <nav className="navbar navbar-expand-lg navbar-light bg-dark ">
         <div className="container-fluid">
-          <a className="navbar-brand text-light" to="#">
+          <Link className="navbar-brand text-light" to="/">
             My Blog
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -25,14 +24,18 @@ export default function Header() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active text-light" aria-current="page" to="#">
+                <Link
+                  className="nav-link active text-light"
+                  aria-current="page"
+                  to="/home"
+                >
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-light" to="#">
+                <Link className="nav-link text-light" to="/about">
                   About
-                </a>
+                </Link>
               </li>
             </ul>
             <form className="d-flex">
